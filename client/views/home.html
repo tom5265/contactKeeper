@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Welcome to the contact keeper!</h1>
+    Name: <input type="text" ng-model="name"></input>
+    Email: <input type="text" ng-model="email"></input>
+   Phone #: <input type="text" ng-model="phone"></input>
+   <button type="button" ng-click="submitContact()">Add Contact</button>
+   <h1>My Contacts:</h1>
+   <div class="contacts" ng-repeat="contact in contacts">
+       <p>{{contact.name}}</p>
+       <p>{{contact.email}}</p>
+       <p>{{contact.phone}}</p>
+       <a href="#/posts/{{contact.id}}">View Contact</a>
+   </div>
+</div>
